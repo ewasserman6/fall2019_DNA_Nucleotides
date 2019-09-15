@@ -153,11 +153,8 @@ int main(int argc, char** argv) // main function
                 cout << "File Name: " << endl;
                 cin >> nextSim;
 
-                cout << "before sum" << endl;
-
                 float sum = dnaString.length();
 
-                cout << "after sum "  << endl;
                 float lineCount = fileController.lineCount(nextSim);
                 float mean = sum/lineCount;
                 float variance = q.variance(nextSim , mean, lineCount);
@@ -187,38 +184,36 @@ int main(int argc, char** argv) // main function
 
                 if (outFile.is_open())
                 {
-                      outFile << "Sum: " << sum << endl;
-                      outFile << "Mean: " << mean << endl;
-                      outFile << "Variance: " << variance << endl;
-                      outFile << "Standard Deviation: " << standdev << endl;
+                    outFile << "Sum: " << sum << endl;
+                    outFile << "Mean: " << mean << endl;
+                    outFile << "Variance: " << variance << endl;
+                    outFile << "Standard Deviation: " << standdev << endl;
 
-                      outFile << "\n";
-                      outFile << "Relative probabilities for nucleotides and nucleotide bigrams: " << endl;
-                      outFile << endl;
+                    outFile << "\n";
+                    outFile << "Relative probabilities for nucleotides and nucleotide bigrams (SIM2): " << endl;
 
-                      outFile << c << ": " <<  q.probability(nextSim, c, sum) << endl;
-                      outFile << t << ": " <<  q.probability(nextSim, t, sum) << endl;
-                      outFile << a << ": " <<  q.probability(nextSim, a, sum) << endl;
-                      outFile << g << ": " <<  q.probability(nextSim, g, sum) << endl;
-                      outFile << aa << ": " <<  q.bigramProbability(nextSim, aa, sum) << endl;
-                      outFile << ac << ": " <<  q.bigramProbability(nextSim, ac, sum) << endl;
-                      outFile << at << ": " <<  q.bigramProbability(nextSim, at, sum) << endl;
-                      outFile<< ag << ": " <<  q.bigramProbability(nextSim, ag, sum) << endl;
-                      outFile << ca << ": " <<  q.bigramProbability(nextSim, ca, sum) << endl;
-                      outFile << cc << ": " <<  q.bigramProbability(nextSim, cc, sum) << endl;
-                      outFile<< ct << ": " <<  q.bigramProbability(nextSim, ct, sum) << endl;
-                      outFile<< cg << ": " <<  q.bigramProbability(nextSim, cg, sum) << endl;
-                      outFile<< ga << ": " <<  q.bigramProbability(nextSim, ga, sum) << endl;
-                      outFile<< gc << ": " <<  q.bigramProbability(nextSim, gc, sum) <<endl;
-                      outFile << gt << ": " <<  q.bigramProbability(nextSim, gt, sum) << endl;
-                      outFile << gg << ": " <<  q.bigramProbability(nextSim, gg, sum) << endl;
-                      outFile << ta << ": " <<  q.bigramProbability(nextSim, ta, sum) << endl;
-                      outFile << tc << ": " <<  q.bigramProbability(nextSim, tc, sum) << endl;
-                      outFile << tt << ": " <<  q.bigramProbability(nextSim, tt, sum) << endl;
-                      outFile << tg << ": " <<  q.bigramProbability(nextSim, tg, sum) << endl;
-                      outFile << endl;
+                    outFile << c << ": " <<  q.probability(nextSim, c, sum) << endl;
+                    outFile << t << ": " <<  q.probability(nextSim, t, sum) << endl;
+                    outFile << a << ": " <<  q.probability(nextSim, a, sum) << endl;
+                    outFile << g << ": " <<  q.probability(nextSim, g, sum) << endl;
+                    outFile << aa << ": " <<  q.bigramProbability(nextSim, aa, sum) << endl;
+                    outFile << ac << ": " <<  q.bigramProbability(nextSim, ac, sum) << endl;
+                    outFile << at << ": " <<  q.bigramProbability(nextSim, at, sum) << endl;
+                    outFile<< ag << ": " <<  q.bigramProbability(nextSim, ag, sum) << endl;
+                    outFile << ca << ": " <<  q.bigramProbability(nextSim, ca, sum) << endl;
+                    outFile << cc << ": " <<  q.bigramProbability(nextSim, cc, sum) << endl;
+                    outFile<< ct << ": " <<  q.bigramProbability(nextSim, ct, sum) << endl;
+                    outFile<< cg << ": " <<  q.bigramProbability(nextSim, cg, sum) << endl;
+                    outFile<< ga << ": " <<  q.bigramProbability(nextSim, ga, sum) << endl;
+                    outFile<< gc << ": " <<  q.bigramProbability(nextSim, gc, sum) <<endl;
+                    outFile << gt << ": " <<  q.bigramProbability(nextSim, gt, sum) << endl;
+                    outFile << gg << ": " <<  q.bigramProbability(nextSim, gg, sum) << endl;
+                    outFile << ta << ": " <<  q.bigramProbability(nextSim, ta, sum) << endl;
+                    outFile << tc << ": " <<  q.bigramProbability(nextSim, tc, sum) << endl;
+                    outFile << tt << ": " <<  q.bigramProbability(nextSim, tt, sum) << endl;
+                    outFile << tg << ": " <<  q.bigramProbability(nextSim, tg, sum) << endl;
+                    outFile << endl;
                 }
-
                 //error checking
                 else{
                     cout << "File not open" << endl;

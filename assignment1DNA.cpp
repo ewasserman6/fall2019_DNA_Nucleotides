@@ -97,11 +97,6 @@ string assignment1DNA::random(float standdev, float mean, float probabilityA, fl
     int freq_T = static_cast<int>((probabilityT * mean * 1000) + .5);
     int freq_g = static_cast<int>((probabilityG * mean * 1000) + .5);
 
-    cout << freq_a << endl;
-    cout << freq_c << endl;
-    cout << freq_T << endl;
-    cout << freq_g << endl;
-
     int count_a = 0;
     int count_c = 0;
     int count_g = 0;
